@@ -5,6 +5,9 @@ $color-light-grey: #f4f4f4
 $color-black: #000000
 
 $main-color: #5101A6
+$main-color-light: #be83fd
+$added-color: #ffd000
+$added-color-light: #efd977
 
 // Общие стили 
 
@@ -50,10 +53,43 @@ ul, ol
 
 .button
     background: $color-white
-    border: 1px solid $main-color
+    border: none
     color: $main-color
-    border-radius: 6px
+    border-radius: 1rem
     text-transform: uppercase
+
+.cosmic-button
+    box-shadow: 0 -5px 15px -3px $main-color-light, 0 5px 15px -3px $main-color-light
+    outline: 2px solid $color-white
+    outline-offset: 3px
+    transition: .3s ease-out
+    &:hover
+        background: $main-color
+        color: white
+        box-shadow: 0 -7px 10px -5px $added-color, 0 7px 10px -5px $added-color
+        outline: 1.5px solid white
+        outline-offset: -4px
+
+.cosmic-logo
+    animation: cosmic linear infinite 4s
+
+@keyframes cosmic
+    60%
+        color: $color-white
+    65%
+        color: $main-color-light
+    75%
+        color: $main-color
+        opacity: 1
+    80%
+        color: $main-color
+    85%
+        color: $main-color
+    90%
+        color: $main-color
+    100%
+        color: $color-white
+        opacity: 0
 
 // HEADER
 

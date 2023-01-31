@@ -45,10 +45,55 @@ ul, ol {
 
 .button {
   background: #ffffff;
-  border: 1px solid #5101A6;
+  border: none;
   color: #5101A6;
-  border-radius: 6px;
+  border-radius: 1rem;
   text-transform: uppercase;
+}
+
+.cosmic-button {
+  box-shadow: 0 -5px 15px -3px #be83fd, 0 5px 15px -3px #be83fd;
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  transition: .3s ease-out;
+}
+
+.cosmic-button:hover {
+  background: #5101A6;
+  color: white;
+  box-shadow: 0 -7px 10px -5px #ffd000, 0 7px 10px -5px #ffd000;
+  outline: 1.5px solid white;
+  outline-offset: -4px;
+}
+
+.cosmic-logo {
+  animation: cosmic linear infinite 4s;
+}
+
+@keyframes cosmic {
+  60% {
+    color: #ffffff;
+  }
+  65% {
+    color: #be83fd;
+  }
+  75% {
+    color: #5101A6;
+    opacity: 1;
+  }
+  80% {
+    color: #5101A6;
+  }
+  85% {
+    color: #5101A6;
+  }
+  90% {
+    color: #5101A6;
+  }
+  100% {
+    color: #ffffff;
+    opacity: 0;
+  }
 }
 
 .page-header {
