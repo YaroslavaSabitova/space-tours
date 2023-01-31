@@ -1,0 +1,110 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 122rem;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: normal;
+  background: #ffffff;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, p, ul, ol, li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 120rem;
+  padding: 5rem 1rem;
+}
+
+.button {
+  background: #ffffff;
+  border: 1px solid #5101A6;
+  color: #5101A6;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.page-header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%), url(../img/background.png) center/cover no-repeat;
+}
+
+.page-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page-header__button {
+  width: 18rem;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.logo-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.logo-info__company {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: .5rem;
+}
+
+.logo-info__text {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  width: 5%;
+}
+
+.description {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: .5rem;
+}
