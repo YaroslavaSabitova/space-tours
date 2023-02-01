@@ -49,6 +49,9 @@ ul, ol {
   color: #5101A6;
   border-radius: 1rem;
   text-transform: uppercase;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 .cosmic-button {
@@ -99,7 +102,7 @@ ul, ol {
 .page-header {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%), url(../img/background.png) center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.9) 100%), url(../img/background.png) center/cover no-repeat;
 }
 
 .page-header__nav {
@@ -112,9 +115,6 @@ ul, ol {
 
 .page-header__button {
   width: 18rem;
-  padding: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 900;
 }
 
 .logo-info {
@@ -152,4 +152,80 @@ ul, ol {
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: .5rem;
+}
+
+.moon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12rem;
+}
+
+.moon__info {
+  width: 40%;
+  max-height: 370px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.moon__object {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 57rem;
+  background: url(../img/moon.png) center/cover no-repeat;
+  animation: rotate 50s linear infinite alternate;
+  backface-visibility: hidden;
+  -webkit-mask-image: url(../img/moon.png);
+  mask-image: url(../img/moon.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: 80% auto;
+  mask-size: 80% auto;
+}
+
+.moon__object::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(96deg, rgba(81, 1, 166, 0) 23%, #5101a6 95%);
+  left: 0;
+  top: 0;
+  transition: transform .3s linear;
+}
+
+.moon__header {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 3rem;
+}
+
+.moon__header span {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-left: 80%;
+}
+
+.moon__header-text {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
