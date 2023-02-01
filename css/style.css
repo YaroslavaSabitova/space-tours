@@ -206,6 +206,7 @@ ul, ol {
   font-weight: 700;
   font-size: 4rem;
   line-height: 3rem;
+  text-shadow: 2px 2px 0 #5101A6, 4px 4px 0 black;
 }
 
 .moon__header span {
@@ -213,12 +214,14 @@ ul, ol {
   font-weight: 300;
   font-size: 2rem;
   margin-left: 80%;
+  text-shadow: none;
 }
 
 .moon__header-text {
   font-weight: 500;
   font-size: 2rem;
   line-height: 3rem;
+  text-shadow: none;
 }
 
 @keyframes rotate {
