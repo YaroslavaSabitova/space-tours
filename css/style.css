@@ -55,14 +55,14 @@ ul, ol {
 }
 
 .cosmic-button {
-  box-shadow: 0 -5px 15px -3px #be83fd, 0 5px 15px -3px #be83fd;
+  box-shadow: 0 -5px 15px -3px #934ae0, 0 5px 15px -3px #934ae0;
   outline: 2px solid #ffffff;
   outline-offset: 3px;
   transition: .3s ease-out;
 }
 
 .cosmic-button:hover {
-  background: #5101A6;
+  background: #934ae0;
   color: white;
   box-shadow: 0 -7px 10px -5px #ffd000, 0 7px 10px -5px #ffd000;
   outline: 1.5px solid white;
@@ -78,7 +78,7 @@ ul, ol {
     color: #ffffff;
   }
   65% {
-    color: #be83fd;
+    color: #934ae0;
   }
   75% {
     color: #5101A6;
@@ -101,7 +101,7 @@ ul, ol {
 
 .page-header {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.9) 100%), url(../img/background.png) center/cover no-repeat;
 }
 
@@ -124,16 +124,16 @@ ul, ol {
 }
 
 .logo-info__company {
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
-  margin-bottom: 2rem;
-  letter-spacing: .5rem;
+  margin-bottom: 1rem;
+  letter-spacing: .3rem;
 }
 
 .logo-info__text {
-  width: 98%;
+  width: 99%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -147,36 +147,53 @@ ul, ol {
   width: 5%;
 }
 
+.arrows-icon {
+  font-size: 15px;
+  font-weight: 900 !important;
+  letter-spacing: -6px;
+  color: #934ae0;
+}
+
 .description {
-  font-size: 1.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: .5rem;
+  letter-spacing: .4rem;
 }
 
 .moon {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 12rem;
+  padding-top: 11rem;
+  position: relative;
 }
 
 .moon__info {
-  width: 40%;
+  width: 50%;
   max-height: 370px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: flex-start;
 }
 
+.moon__info-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
 .moon__object {
-  position: relative;
+  position: absolute;
+  top: 40px;
+  right: -60px;
   display: block;
   width: 50%;
   height: 57rem;
-  background: url(../img/moon.png) center/cover no-repeat;
+  background: linear-gradient(96deg, rgba(81, 1, 166, 0) 23%, #5101a6 95%), url(../img/moon.png) center/cover no-repeat;
+  transform: translate(35px, 65px);
   animation: rotate 50s linear infinite alternate;
   backface-visibility: hidden;
   -webkit-mask-image: url(../img/moon.png);
@@ -189,24 +206,13 @@ ul, ol {
   mask-size: 80% auto;
 }
 
-.moon__object::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(96deg, rgba(81, 1, 166, 0) 23%, #5101a6 95%);
-  left: 0;
-  top: 0;
-  transition: transform .3s linear;
-}
-
 .moon__header {
   color: #ffffff;
   font-weight: 700;
   font-size: 4rem;
   line-height: 3rem;
-  text-shadow: 2px 2px 0 #5101A6, 4px 4px 0 black;
+  text-shadow: 2px 2px 0 #5101A6, 4px 4px 0 #934ae0;
+  margin-bottom: 5rem;
 }
 
 .moon__header span {
@@ -231,4 +237,29 @@ ul, ol {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.info-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #5101A6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s ease;
+}
+
+.info-icon:hover {
+  background-color: #934ae0;
+}
+
+.info-icon i {
+  color: #ffffff;
+  font-size: 2.4rem;
+  transition: .3s ease;
+}
+
+.info-icon:hover i {
+  font-size: 3rem;
 }
