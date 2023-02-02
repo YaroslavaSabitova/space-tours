@@ -132,11 +132,30 @@ ul, ol
     display: flex
     flex-direction: row
     width: 5%
+    transition: text-shadow .3s ease 2s
+    backface-visibility: hidden
     &-icon
         font-size: 15px
         font-weight: 900 !important
         letter-spacing: -6px
         color: $main-color-light
+
+.logo-info:hover .arrows
+    animation: arrows 2s cubic-bezier(0, 0.55, 0.45, 1)
+    text-shadow: 0 0 0 $added-color-light
+    transition: text-shadow .3s 
+
+@keyframes arrows
+    0%
+        transform: translateX(-12px)
+    50%
+        transform: translateX(6px)
+    60%
+        transform: translateX(0)
+    80%
+        transform: translateX(4px)
+    100%
+        transform: translateX(0)
 
 .description
     font-size: 1rem
@@ -171,7 +190,7 @@ ul, ol
         display: block
         width: 50%
         height: 57rem
-        background: linear-gradient(96deg, rgba(81,1,166,0) 23%, rgba($main-color,1) 95%), url(../img/moon.png) center/cover no-repeat
+        background: linear-gradient(96deg, rgba(81,1,166,0) 25%, rgba($main-color,1) 95%), url(../img/moon.png) center/cover no-repeat
         transform: translate(35px, 65px)
         animation: rotate 50s linear infinite alternate
         backface-visibility: hidden
