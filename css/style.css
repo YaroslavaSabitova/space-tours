@@ -13,9 +13,10 @@ body {
   min-height: 100vh;
   font-size: 1.6rem;
   line-height: 2rem;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
   font-weight: normal;
   background: #ffffff;
+  color: #000000;
   position: relative;
 }
 
@@ -25,12 +26,22 @@ img {
   display: block;
 }
 
-h1, h2, h3, h4, p, ul, ol, li {
+h1, h2, h3, h4 {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  color: #200142;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 ul, ol {
@@ -40,10 +51,10 @@ ul, ol {
 .container {
   margin: 0 auto;
   width: 120rem;
-  padding: 5rem 1rem;
 }
 
 .button {
+  font-family: "Roboto", sans-serif;
   background: #ffffff;
   border: none;
   color: #5101A6;
@@ -87,11 +98,8 @@ ul, ol {
   80% {
     color: #5101A6;
   }
-  85% {
-    color: #5101A6;
-  }
   90% {
-    color: #5101A6;
+    color: #ffd000;
   }
   100% {
     color: #ffffff;
@@ -102,6 +110,7 @@ ul, ol {
 .page-header {
   width: 100%;
   height: 90vh;
+  padding: 5rem 1rem;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.9) 100%), url(../img/background.png) center/cover no-repeat;
 }
 
@@ -250,7 +259,6 @@ ul, ol {
 }
 
 .moon__header-text {
-  font-weight: 500;
   font-size: 2rem;
   line-height: 3rem;
   text-shadow: none;
@@ -288,4 +296,89 @@ ul, ol {
 
 .info-icon:hover i {
   font-size: 3rem;
+}
+
+.tours {
+  width: 100%;
+  height: 90vh;
+  padding: 15rem 1rem 60rem;
+}
+
+.tours__title {
+  color: #200142;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 7.5rem;
+}
+
+.tours__info {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tours__info-title {
+  color: #000000;
+  margin-bottom: 4.5rem;
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 2.8rem;
+  position: relative;
+  display: inline-block;
+  backface-visibility: hidden;
+  transition: color .3s ease-out;
+}
+
+.tours__info-title:hover {
+  color: #ffd000;
+}
+
+.tours__info-title::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #efd977;
+  transform-origin: bottom right;
+  transition: transform .4s ease-out;
+  margin-bottom: -.5rem;
+}
+
+.tours__info-title:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.tours__info-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 6.5rem 5rem;
+  align-items: start;
+}
+
+.tours__info-links {
+  text-align: left;
+}
+
+.tours__info-pics {
+  margin-bottom: 2.4rem;
+}
+
+.tours__info-subtitle {
+  color: #5101A6;
+  margin-bottom: .8rem;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+footer {
+  background: green;
+  width: 100%;
 }
