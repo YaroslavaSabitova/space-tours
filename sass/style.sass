@@ -7,8 +7,11 @@ $color-black: #000000
 
 $main-color: #5101A6
 $main-color-light: #934ae0
-$added-color: #ffd000
-$added-color-light: #efd977
+$added-color: #cdab14
+$added-color-light: #eecf42
+
+$cosmic-shadow-btn: 0 -7px 10px -5px $added-color, 0 7px 10px -5px $added-color
+$cosmic-shadow-pics: 0 -7px 10px -5px $main-color-light, 0 7px 10px -5px $main-color-light
 
 // Общие стили 
 
@@ -73,14 +76,13 @@ ul, ol
     font-weight: 900
 
 .cosmic-button
-    box-shadow: 0 -5px 15px -3px $main-color-light, 0 5px 15px -3px $main-color-light
     outline: 2px solid $color-white
     outline-offset: 3px
     transition: .3s ease-out
     &:hover
         background: $main-color-light
         color: white
-        box-shadow: 0 -7px 10px -5px $added-color, 0 7px 10px -5px $added-color
+        box-shadow: $cosmic-shadow-btn
         outline: 1.5px solid white
         outline-offset: -4px
 
@@ -259,14 +261,14 @@ ul, ol
 .tours
     width: 100%
     height: 90vh
-    padding: 15rem 1rem 60rem
+    padding: 10rem 1rem 55rem
     &__title
         color: $color-dark
         font-weight: 700
-        font-size: 40px
-        line-height: 48px
+        font-size: 4rem
+        line-height: 4.8rem
         text-align: center
-        margin-bottom: 7.5rem
+        margin-bottom: 6.5rem
 
 .tours__info
     width: 100%
@@ -274,8 +276,8 @@ ul, ol
     text-align: center
     &-title
         color: $color-black
-        margin-bottom: 4.5rem
-        padding: 10px 0
+        margin-bottom: 5rem
+        padding: 1rem 0
         font-weight: normal
         font-size: 2.8rem
         position: relative
@@ -306,15 +308,37 @@ ul, ol
         align-items: start
     &-links
         text-align: left
+        &:active, &:focus .tours__info-subtitle
+            color: $added-color
+        &:active, &:focus .tours__info-text
+            color: $main-color
+            opacity: 1
+            transform: translateY(0)
+        &:active, &:focus .tours__info-pics
+            border: 2px solid $added-color-light
     &-pics
         margin-bottom: 2.4rem
+        transition: .3s ease-out
+        border-radius: .8rem
+        border: 2px solid transparent
+        box-shadow: $cosmic-shadow-pics
+        &:hover
+            filter: brightness(1.1) saturate(130%)
     &-subtitle
         color: $main-color
         margin-bottom: .8rem
         font-weight: 700
-        font-size: 14px
-        line-height: 24px
+        font-size: 1.4rem
+        line-height: 2.4rem
         text-transform: uppercase
+        transition: border .3s ease-out
+    &-text
+        transform: translateY(-30px)
+        transition: transform .7s ease-out 
+        opacity: 0
+    &-items:hover &-text
+        transform: translateY(0)
+        opacity: 1
 
 // FOOTER
 
