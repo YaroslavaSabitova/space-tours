@@ -6,7 +6,7 @@ $color-dark: #200142
 $color-black: #000000
 
 $main-color: #5101A6
-$main-color-light: #934ae0
+$main-color-light: #BB6BD9
 $added-color: #cdab14
 $added-color-light: #eecf42
 
@@ -51,7 +51,7 @@ a
     text-decoration: none
     color: $color-dark
 
-p
+p, form, button
     font-family: "Roboto", sans-serif
     font-weight: 400
     font-size: 13px
@@ -71,7 +71,6 @@ ul, ol
     text-align: center
 
 .button
-    font-family: "Roboto", sans-serif
     background: $color-white
     border: none
     color: $main-color
@@ -80,6 +79,7 @@ ul, ol
     padding: 1.5rem
     font-size: 1.2rem
     font-weight: 900
+    cursor: pointer
 
 .cosmic-button
     outline: 2px solid $color-white
@@ -180,7 +180,7 @@ ul, ol
     text-transform: uppercase
     color: $color-white
     letter-spacing: .4rem
-    transition: color .3s ease
+    transition: color .3s ease .25s
 
 .logo-info:hover .description
     color: $added-color-light
@@ -229,7 +229,7 @@ ul, ol
         font-weight: 700
         font-size: 4rem
         line-height: 3rem
-        text-shadow: 2px 2px 0 $main-color, 4px 4px 0 rgba($main-color-light, 20%)
+        text-shadow: 2px -2px 0 $main-color, 4px -4px 0 rgba($main-color-light, 20%)
         margin-bottom: 5rem
         span
             font-style: italic
@@ -259,6 +259,7 @@ ul, ol
     transition: .5s ease
     &:hover
         background-color: $main-color-light
+        box-shadow: $cosmic-shadow-btn
     i
         color: $color-white
         font-size: 2.4rem
@@ -353,7 +354,6 @@ ul, ol
     height: 80vh
     padding: 10rem 0 55rem
     background: url(../img/footer.png) center/cover no-repeat, linear-gradient(0deg, rgba($color-black, 0.7), rgba($color-black, 0.7)), $main-color
-    text-align: center
     color: $color-white
     border-bottom: 8rem solid black
     &__title
@@ -364,8 +364,65 @@ ul, ol
         font-size: 2rem
         line-height: 2.8rem
         margin-bottom: 5rem
+        text-align: center
     &__logo
         width: 18%
         margin: 0 auto
         transform: translate(0%, 130%)
+    &__form
+        color: $color-white
+        margin-bottom: 14rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        legend
+            font-size: 1.2rem
+        label
+            display: none
+        fieldset
+            width: 20%
+            border: 1px solid $main-color-light
+            border-radius: .6rem
+        input
+            padding: 2rem
+            text-align: left
+            background-color: transparent
+            border: none
+            box-shadow: none
+            &::placeholder
+                color: $main-color-light
+                font-weight: 700
+                font-size: 1.6rem
+                line-height: 2.4rem
+
+fieldset:nth-child(3)
+    margin-top: .5%
+    border: 1px solid $color-white
+    legend
+        display: none
+    input::placeholder
+        color: $color-white        
+
+.form-button
+    width: 20%
+    padding: 2rem
+    font-weight: 700
+    background: $main-color 
+    border: none
+    color: $color-white
+    font-weight: 700
+    font-size: 1.6rem
+    line-height: 2.4rem
+    border-radius: .6rem
+    text-transform: uppercase
+    cursor: pointer
+    transition: .5s ease
+    &:hover
+        background: $main-color-light
+    &:active
+        box-shadow: $cosmic-shadow-btn
+        
+
+
 

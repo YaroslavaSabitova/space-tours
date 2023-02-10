@@ -145,15 +145,30 @@
                 Any questions?
             </h2>
             <p class="page-footer__info">
-                We know almost all about Moon. <br>Organize breathtaking tours for 6 years.<br> We'll be happy to answer your questions.<br> To contact us pease fill the form below.
+                We know almost all about Moon.<br>
+                Organize breathtaking tours for 6 years.<br> We'll be happy to answer your questions.<br> 
+                To contact us pease fill the form below.
             </p>
 
-            <form action="#!" method="post" class="page-footer__form" style="margin-bottom: 11rem">
-                <p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum corrupti asperiores aut maxime maiores, odio doloribus ipsum mollitia, veritatis quibusdam voluptas itaque necessitatibus nisi facere quam alias assumenda, libero dolore?
-                Blanditiis veritatis expedita aperiam similique debitis eius cum voluptatem corrupti asperiores molestiae iusto porro reprehenderit sint impedit unde numquam esse hic, recusandae aliquid non provident eligendi aliquam nulla. Possimus, facilis.
-                Veniam maiores laboriosam repellat laborum id ad sint, temporibus quod quidem, ipsam eius, animi nesciunt illo dolor vero quaerat. Blanditiis cum tempore magnam repellat, fugit ratione nulla dolores aliquid amet.
-                Quas accusantium consectetur assumenda qui nesciunt dolore perspiciatis suscipit, sit ea, reprehenderit quo voluptatibus atque explicabo non possimus, repudiandae labore ab dicta exercitationem dolores numquam rem debitis! Officia, consectetur veritatis?
-                Eligendi deleniti est soluta id, omnis, nostrum, vel excepturi dicta animi commodi facilis at aliquid. Veniam quos hic quam doloribus labore! Aliquid, quod tenetur earum doloribus possimus eveniet voluptatum excepturi!</p>
+            <form action="#!" method="post" class="page-footer__form">
+                <fieldset>
+                    <legend>Your Name and Surname</legend>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" pattern="[A-Z]{1}" placeholder="NAME SURNAME" autocomplete="on" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Phone number</legend>
+                    <label for="tel">Your phone number</label>
+                    <input type="tel" id="tel" name="tel" pattern="[8]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8-999-999-99-99" autocomplete="on" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Your email</legend>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="on" placeholder="Email" required>
+                </fieldset>
+                <button class="form-button">
+                    Send
+                </button>
             </form>
 
             <div class="logo-info page-footer__logo">
@@ -171,7 +186,7 @@
                     </p>
                 </div>
             </div>
-            
+
         </div>
     </footer>
 </body>
