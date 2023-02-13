@@ -663,6 +663,15 @@ fieldset:nth-child(3) input::placeholder {
     transform: none;
     opacity: 1;
   }
+  .tours__info-links {
+    text-align: justify;
+  }
+  .tours__info-subtitle {
+    text-align: center;
+  }
+  .tours__info-text {
+    width: 100%;
+  }
   .page-footer__info {
     width: 55%;
   }
