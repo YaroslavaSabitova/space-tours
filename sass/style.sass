@@ -1,4 +1,4 @@
-// Переменные и миксины 
+// VARIABLES
 
 $color-white: #ffffff
 $color-light-grey: #f4f4f4
@@ -13,7 +13,7 @@ $added-color-light: #eecf42
 $cosmic-shadow-btn: 0 -7px 10px -5px $added-color, 0 7px 10px -5px $added-color
 $cosmic-shadow-pics: 0 -7px 10px -5px $main-color-light, 0 7px 10px -5px $main-color-light
 
-// Общие стили 
+// MAIN STYLE
 
 *, ::after, ::before
     margin: 0
@@ -21,9 +21,6 @@ $cosmic-shadow-pics: 0 -7px 10px -5px $main-color-light, 0 7px 10px -5px $main-c
     box-sizing: border-box
 
 html
-    // font-size: 10px
-    // 10px : 16px (по умолчанию) * 100 = 62.5%
-    // для изменения размера шрифта для слабовидящих 
     font-size: 62.5%
 
 body
@@ -88,6 +85,7 @@ ul, ol
     outline: 2px solid $color-white
     outline-offset: 3px
     transition: .3s ease-out
+
     &:hover
         background: $main-color-light
         color: white
@@ -120,20 +118,22 @@ ul, ol
     width: 100%
     height: auto
     padding: 5rem 1rem
-    // background: linear-gradient(90deg, rgba($color-black,0.5) 0%, rgba($color-black,0.7) 50%, rgba($color-black,0.9) 100%), url(../img/background1.png) center/cover no-repeat
     background: url(../img/background1.png) center/cover no-repeat
+
     &__nav
         display: flex
         justify-content: space-between
         align-content: center
         align-items: center
         flex-wrap: wrap
+
     &__button
         width: 18rem
 
 .logo-info
     display: flex
     flex-direction: column
+
     &__company
         font-size: 3rem
         text-transform: uppercase
@@ -141,6 +141,7 @@ ul, ol
         font-weight: bold
         margin-bottom: 1rem
         letter-spacing: .3rem
+
     &__text
         width: 100%
         display: flex
@@ -155,6 +156,7 @@ ul, ol
     width: 5%
     transition: text-shadow .3s ease 2s
     backface-visibility: hidden
+
     &-icon
         font-size: 15px
         font-weight: 900 !important
@@ -188,7 +190,7 @@ ul, ol
 .logo-info:hover .description
     color: $added-color-light
 
-// SECTION MOON
+// MOON
 
 .moon
     width: 100%
@@ -196,6 +198,7 @@ ul, ol
     justify-content: space-between
     padding-top: 11rem
     position: relative
+
     &__info
         width: 50%
         max-height: 370px
@@ -203,11 +206,13 @@ ul, ol
         flex-direction: column
         flex-wrap: wrap
         align-items: flex-start
+
         &-buttons
             display: flex
             align-items: center
             justify-content: space-between
             width: 50%
+
     &__object
         position: absolute
         top: 10%
@@ -227,6 +232,7 @@ ul, ol
         mask-position: center center
         -webkit-mask-size: 80% auto
         mask-size: 80% auto
+
     &__header
         color: $color-white
         font-weight: 700
@@ -234,12 +240,14 @@ ul, ol
         line-height: 3rem
         text-shadow: 2px -2px 0 $main-color, 4px -4px 0 rgba($main-color-light, 20%)
         margin-bottom: 5rem
+
         span
             font-style: italic
             font-weight: 300
             font-size: 2rem
             margin-left: 80%
             text-shadow: none
+
         &-text
             font-size: 2rem
             line-height: 3rem
@@ -260,13 +268,16 @@ ul, ol
     align-items: center
     justify-content: center
     transition: .5s ease
+
     &:hover
         background-color: $main-color-light
         box-shadow: $cosmic-shadow-btn
+
     i
         color: $color-white
         font-size: 2.4rem
         transition: .3s ease
+
     &:hover i
         font-size: 3rem
 
@@ -276,6 +287,7 @@ ul, ol
     width: 100%
     height: 90vh
     padding: 10rem 1rem 55rem
+
     &__title
         color: $color-dark
         margin-bottom: 6.5rem
@@ -284,6 +296,7 @@ ul, ol
     width: 100%
     margin: 0 auto
     text-align: center
+
     &-title
         color: $color-black
         margin-bottom: 5rem
@@ -294,8 +307,10 @@ ul, ol
         display: inline-block
         backface-visibility: hidden
         transition: color .3s ease-out
+
         &:hover
             color: $added-color
+
         &::before
             content: ''
             position: absolute
@@ -308,6 +323,7 @@ ul, ol
             transform-origin: bottom right
             transition: transform .4s ease-out
             margin-bottom: -.5rem
+
         &:hover::before
             transform: scaleX(1)
             transform-origin: bottom left
@@ -316,14 +332,18 @@ ul, ol
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr))
         grid-gap: 6.5rem 5rem
         align-items: start
+
     &-links
         text-align: left
+
         &:active, &:focus .tours__info-subtitle
             color: $added-color
+
         &:active, &:focus .tours__info-text
             color: $main-color
             opacity: 1
             transform: translateY(0)
+
         &:active, &:focus .tours__info-pics
             border: 2px solid $added-color-light
     &-pics
@@ -332,8 +352,10 @@ ul, ol
         border-radius: .8rem
         border: 2px solid transparent
         box-shadow: $cosmic-shadow-pics
+
         &:hover
             filter: brightness(1.1) saturate(130%)
+
     &-subtitle
         color: $main-color
         margin-bottom: .8rem
@@ -342,10 +364,12 @@ ul, ol
         line-height: 2.4rem
         text-transform: uppercase
         transition: border .3s ease-out
+
     &-text
         transform: translateY(-30px)
         transition: transform .7s ease-out
         opacity: 0
+
     &-items:hover &-text
         transform: translateY(0)
         opacity: 1
@@ -359,8 +383,10 @@ ul, ol
     background: url(../img/footer.png) center/cover no-repeat, linear-gradient(0deg, rgba($color-black, 0.7), rgba($color-black, 0.7)), $main-color
     color: $color-white
     border-bottom: 8rem solid black
+
     &__title
         margin-bottom: 6.5rem
+
     &__info
         width: 45%
         margin: 0 auto
@@ -368,10 +394,12 @@ ul, ol
         line-height: 2.8rem
         margin-bottom: 5rem
         text-align: center
+
     &__logo
         width: 18.5%
         margin: 0 auto
         transform: translate(0%, 130%)
+
     &__form
         color: $color-white
         margin-bottom: 14rem
@@ -379,21 +407,25 @@ ul, ol
         flex-wrap: wrap
         justify-content: space-between
         align-items: center
+
         legend
             font-size: 1.2rem
         label
             display: none
+
         fieldset
             width: 20%
             padding: .5rem
             border: 1px solid $main-color-light
             border-radius: .6rem
+
         input
             padding: 2rem
             text-align: left
             background-color: transparent
             border: none
             box-shadow: none
+
             &::placeholder
                 color: $main-color-light
                 font-weight: 700
@@ -403,6 +435,7 @@ ul, ol
 fieldset:nth-child(3)
     margin-top: .5%
     border: 1px solid $color-white
+    
     legend
         display: none
     input::placeholder
@@ -422,6 +455,7 @@ fieldset:nth-child(3)
     text-transform: uppercase
     cursor: pointer
     transition: .5s ease
+
     &:hover
         background: $main-color-light
         box-shadow: $cosmic-shadow-btn
@@ -429,6 +463,7 @@ fieldset:nth-child(3)
 // MEDIA QUERIES
 
 @media (max-width: 1199px)
+
     .container
         width: 940px
 
@@ -440,12 +475,15 @@ fieldset:nth-child(3)
 
     .tours
         height: 1070px
+
         &__info-images
             grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr))
             margin-left: 5%
+
         &__info-text
             width: 80%
             font-size: 1.5rem
+
         &__info-items
             justify-self: center
             align-self: center
@@ -454,6 +492,7 @@ fieldset:nth-child(3)
         width: 22%
 
 @media (max-width: 991px)
+
     .container
         width: 720px
 
@@ -462,6 +501,7 @@ fieldset:nth-child(3)
 
     .logo-info
         width: 40%
+
         &__text
             width: 50%
 
@@ -470,21 +510,27 @@ fieldset:nth-child(3)
 
     .tours
         height: 930px
+
         &__info-images
             grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr))
             margin-left: 0
+
         &__info-title
             font-size: 3.5rem
+
         &__info-pics
             margin-bottom: 5rem
+
         &__info-subtitle
             font-size: 2.5rem
             margin-bottom: 2rem
+
         &__info-text
             font-size: 2.5rem
 
     .page-footer
         height: 520px
+
         &__info
             font-size: 2.5rem
             line-height: 3.2rem
@@ -493,16 +539,20 @@ fieldset:nth-child(3)
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-gap: 40px 30px
+
         fieldset
             width: 100%
             legend
                 font-size: 2rem
+
             input
                 width: 100%
                 text-align: center
                 padding: 1.7rem 2rem 2.5rem
+
             input::placeholder
                 font-size: 2.5rem
+
         fieldset:nth-child(3)
             input
                 padding: 1.7rem 2rem 2rem
@@ -518,6 +568,7 @@ fieldset:nth-child(3)
         align-items: center
 
 @media (max-width: 767px)
+
     .container
         width: 540px
 
@@ -530,8 +581,10 @@ fieldset:nth-child(3)
     .info-icon
         width: 7rem
         height: 7rem
+
         i
             font-size: 3.5rem
+
         &:hover i
             font-size: 4rem
 
@@ -540,28 +593,35 @@ fieldset:nth-child(3)
             width: 100%
             text-align: center
             align-items: center
+
         &__object
             display: none
 
     .tours
         height: 870px
+
         &__info-text
             transform: none
             opacity: 1
+
         &__info-links
             text-align: justify
+
         &__info-subtitle
             text-align: center
+
         &__info-text
             width: 100%
 
     .page-footer
         &__info
             width: 55%
+
         &__form
             margin-bottom: 17rem
 
 @media (max-width: 575px)
+
     .container
         width: 100%
 
@@ -578,6 +638,7 @@ fieldset:nth-child(3)
 
     .tours
         height: 2050px
+
         &__info-images
             display: flex
             flex-direction: column
@@ -586,19 +647,23 @@ fieldset:nth-child(3)
             justify-content: center
             margin: 0 auto
             width: 100%
+
         &__info-items
             margin: 0 auto
             width: 100%
+
         &__info-pics
             margin: 0 auto
             margin-bottom: 30px
             width: 75%
+
         &__info-subtitle
             font-size: 20px
             text-align: center
             margin: 0 auto
             margin-bottom: 15px
             width: 75%
+
         &__info-text
             margin: 0 auto
             width: 70%
