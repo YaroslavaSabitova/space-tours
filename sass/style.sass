@@ -22,6 +22,7 @@ $cosmic-shadow-pics: 0 -7px 10px -5px $main-color-light, 0 7px 10px -5px $main-c
 
 html
     font-size: 62.5%
+    overflow: hidden
 
 body
     min-width: 122rem
@@ -33,6 +34,10 @@ body
     background: $color-white
     color: $color-black
     position: relative
+    overflow: hidden
+
+main
+    overflow: hidden
 
 img
     max-width: 100%
@@ -216,9 +221,9 @@ ul, ol
     &__object
         position: absolute
         top: 10%
-        left: 56%
+        left: 60%
         display: block
-        width: 35%
+        width: 50%
         height: 50rem
         background: linear-gradient(96deg, rgba(81,1,166,0) 25%, rgba($main-color,1) 95%), url(../img/moon.png) center/cover no-repeat
         transform: translate(35px, 65px)
@@ -435,7 +440,7 @@ ul, ol
 fieldset:nth-child(3)
     margin-top: .5%
     border: 1px solid $color-white
-    
+
     legend
         display: none
     input::placeholder

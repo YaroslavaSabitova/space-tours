@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
 }
 
 body {
@@ -18,6 +19,11 @@ body {
   background: #ffffff;
   color: #000000;
   position: relative;
+  overflow: hidden;
+}
+
+main {
+  overflow: hidden;
 }
 
 img {
@@ -236,9 +242,9 @@ ul, ol {
 .moon__object {
   position: absolute;
   top: 10%;
-  left: 56%;
+  left: 60%;
   display: block;
-  width: 35%;
+  width: 50%;
   height: 50rem;
   background: linear-gradient(96deg, rgba(81, 1, 166, 0) 25%, #5101a6 95%), url(../img/moon.png) center/cover no-repeat;
   transform: translate(35px, 65px);
