@@ -22,7 +22,6 @@ $cosmic-shadow-pics: 0 -7px 10px -5px $main-color-light, 0 7px 10px -5px $main-c
 
 html
     font-size: 62.5%
-    overflow: hidden
 
 body
     min-width: 122rem
@@ -34,10 +33,6 @@ body
     background: $color-white
     color: $color-black
     position: relative
-    overflow: hidden
-
-main
-    overflow: hidden
 
 img
     max-width: 100%
@@ -122,8 +117,9 @@ ul, ol
 .page-header
     width: 100%
     height: auto
-    padding: 5rem 1rem
+    padding: 5rem 1rem 8rem
     background: url(../img/background1.png) center/cover no-repeat
+    overflow: hidden
 
     &__nav
         display: flex
@@ -220,7 +216,7 @@ ul, ol
 
     &__object
         position: absolute
-        top: 10%
+        top: 7%
         left: 60%
         display: block
         width: 50%
@@ -474,9 +470,6 @@ fieldset:nth-child(3)
 
     html
         font-size: 56.25%
-
-    .moon__object
-        width: 40%
 
     .tours
         height: 1070px

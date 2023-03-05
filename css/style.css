@@ -6,7 +6,6 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
 }
 
 body {
@@ -19,11 +18,6 @@ body {
   background: #ffffff;
   color: #000000;
   position: relative;
-  overflow: hidden;
-}
-
-main {
-  overflow: hidden;
 }
 
 img {
@@ -125,8 +119,9 @@ ul, ol {
 .page-header {
   width: 100%;
   height: auto;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 8rem;
   background: url(../img/background1.png) center/cover no-repeat;
+  overflow: hidden;
 }
 
 .page-header__nav {
@@ -241,7 +236,7 @@ ul, ol {
 
 .moon__object {
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 60%;
   display: block;
   width: 50%;
@@ -535,9 +530,6 @@ fieldset:nth-child(3) input::placeholder {
   }
   html {
     font-size: 56.25%;
-  }
-  .moon__object {
-    width: 40%;
   }
   .tours {
     height: 1070px;
